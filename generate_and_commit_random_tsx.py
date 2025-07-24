@@ -28,7 +28,7 @@ export default {name};
 def write_component_file(name):
     COMPONENTS_DIR.mkdir(parents=True, exist_ok=True)
     path = COMPONENTS_DIR / f"{name}.tsx"
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(generate_tsx_component(name))
     return path
 
